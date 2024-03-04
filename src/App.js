@@ -17,10 +17,11 @@ export default class App extends Component {
   };
 
   extractVideoId = (url) => {
-    const regex = /[?&]v=([^#&?]+)/;
+    const regex = /(?:youtu\.be\/|youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=))([^"&?\/\s]{11})/;
     const match = url.match(regex);
     return match ? match[1] : null;
   };
+
 
   clickHandler = (e) => {
     e.preventDefault();
@@ -93,7 +94,7 @@ export default class App extends Component {
                   <div className="item my-4 rounded" key={i}>
                     <img src={this.state.data.thumbnail[3].url} className="w-72 sm:w-96 object-contain rounded rounded-b-none" alt="" />
                     <div className="info bg-white p-5 rounded rounded-t-none">
-                      <p className="name">{this.state.data.title.split(' ').slice(0, 4).join(' ')+"..."}</p>
+                      <p className="name">{this.state.data.title.split(' ').slice(0, 4).join(' ') + "..."}</p>
                       <div className="action flex justify-between font-semibold">
                         <p className="video-resolution">{format.qualityLabel}</p>
                         <a download={format.url} href={format.url}><span>Download</span></a>
@@ -105,7 +106,7 @@ export default class App extends Component {
             </div>
           </div>
 
-          <div className="copyright pt-52">
+          <div className="copyright pt-52 pb-16">
             <span className="text-sm text-gray-500 font-sans block text-center">© 2024 all rights reserved. </span>
             <span className="text-gray-500 text-xs block text-center">Developed by <a href="https://www.linkedin.com/in/yahya-jamil/" target='_blank' className="text-gray-700">Yahya Jamil</a></span>
           </div>
