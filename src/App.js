@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css'
+import './App.css';
 
 export default class App extends Component {
 
@@ -69,8 +69,8 @@ export default class App extends Component {
 
     return (
       <>
-        <div className="app flex flex-col items-center">
-          <div className="flex justify-center w-full h-svh font-newTimes ">
+        <div className="app flex flex-col items-center w-full h-full font-newTimes">
+          <div className="flex justify-center py-20">
             <div className="container flex justify-center flex-col items-center">
               <h1 className="title text-red-600 text-3xl mb-1 font-semibold font-newTimes sm:text-5xl">Youtube Downloader <i
                 className="fas"></i></h1>
@@ -105,9 +105,9 @@ export default class App extends Component {
             </div>
           </div>
 
-          <div className="copyright">
+          <div className="copyright pt-52">
             <span className="text-sm text-gray-500 font-sans block text-center">© 2024 all rights reserved. </span>
-            <span className="text-gray-500 text-xs block text-center">Developed by <a href="/#" className="text-gray-700">Yahya Jamil</a></span>
+            <span className="text-gray-500 text-xs block text-center">Developed by <a href="https://www.linkedin.com/in/yahya-jamil/" target='_blank' className="text-gray-700">Yahya Jamil</a></span>
           </div>
         </div>
       </>
