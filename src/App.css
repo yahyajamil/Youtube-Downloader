@@ -1,38 +1,50 @@
+/* Custom scrollbar styles */
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
+  background: red;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+  background: #b30000;
 }
 
-body {
-    background: rgb(254 226 226);
-    background: linear-gradient(rgba(254, 225, 255, 1), rgba(254, 226, 226, 1));
-    background-repeat: no-repeat;
+/* Set height to 100% and apply gradient background for body and html */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(rgba(254, 225, 255, 1), rgba(254, 226, 226, 1));
 }
 
-.container {
-    position: relative;
+/* Ensure the app div has the same gradient background and fills the screen */
+.app {
+  min-height: 100%;
+  background: linear-gradient(rgba(254, 225, 255, 1), rgba(254, 226, 226, 1));
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url('../public/image/youtube.png') no-repeat center;
-    opacity: 0.1;
-    z-index: -1;
+
+.title-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.title-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../public/image/youtube.png") no-repeat center;
+  opacity: .4;
+  z-index: -1;
 }
