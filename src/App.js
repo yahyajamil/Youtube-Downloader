@@ -113,10 +113,10 @@ export default class App extends Component {
             <div className="container flex justify-center flex-col items-center">
               <div className="title-container py-16 z-10">
                 <h1 className="z-20 text-center title text-red-600 text-3xl mb-1 font-semibold font-newTimes sm:text-5xl">
-                  Youtube Downloader <i className="fas"></i>
+                  Graditos Downloader <i className="fas"></i>
                 </h1>
                 <p className="sub-title text-black text-lg sm:text-2xl text-center">
-                  Download Youtube Videos For Free
+                  Descarga videos de Youtube gratis
                 </p>
               </div>
               <div className="formats mb-6">
@@ -155,7 +155,7 @@ export default class App extends Component {
                     value={this.state.inputValue}
                     onChange={this.inputValueHandler}
                     aria-label="Search"
-                    placeholder="Search or paste Youtube link here"
+                    placeholder="Busca un video o escribe el link aqui"
                     autoComplete="off"
                     required
                   />
@@ -163,7 +163,7 @@ export default class App extends Component {
                     onClick={this.clickHandler}
                     className="bg-red-600 text-white py-3 rounded px-4 mt-4 mx-2 font-semibold hover:bg-red-700 transition-all font-sans"
                   >
-                    Download
+                    Descargar
                   </button>
                 </form>
               </div>
@@ -193,7 +193,7 @@ export default class App extends Component {
                         </p>
                         <a download={format.url} href={format.url}>
                           <button className="bg-blue-600 py-1 px-3 rounded-lg">
-                            <span className="text-white font-sans">Download</span>
+                            <span className="text-white font-sans">Descargar</span>
                           </button>
                         </a>
                       </div>
@@ -202,22 +202,6 @@ export default class App extends Component {
                 </div>
               </div>
             )}
-          </div>
-
-          <div className="copyright mb-28">
-            <span className="text-sm text-gray-500 font-sans block text-center">
-              © 2024 all rights reserved.{" "}
-            </span>
-            <span className="text-gray-500 font-sans text-xs block text-center">
-              Developed by{" "}
-              <a
-                href="https://yahyajamil.github.io/"
-                target="_blank"
-                className="text-gray-700"
-              >
-                Yahya Jamil
-              </a>
-            </span>
           </div>
         </div>
       </>
